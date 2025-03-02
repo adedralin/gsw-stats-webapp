@@ -1,0 +1,34 @@
+{{!-- Extend the main layout --}}
+{{> header}}
+
+<h1>Golden State Warriors Roster</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Birthday</th>
+            <th>Experience</th>
+            <th>College</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each players}}
+        <tr>
+            <td>{{num}}</td>
+            <td>{{name}}</td>
+            <td>{{position}}</td>
+            <td>{{height}}</td>
+            <td>{{weight}}</td>
+            <td>{{bday}}</td>
+            <td>{{experience}}</td>
+            <td>{{college}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{> footer}}
