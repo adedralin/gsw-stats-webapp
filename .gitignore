@@ -19,6 +19,7 @@ build/
 # Ignore local configuration files
 config.json
 database.sqlite
+modules/config.js
 
 # Ignore IDE/editor settings
 .vscode/
