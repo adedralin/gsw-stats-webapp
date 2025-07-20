@@ -1,7 +1,38 @@
-<div>
-  <h1>Golden State Warriors Record</h1>
+{{> header}}
+
+<div class="record-container">
+  <h1>{{record.teamName}} - 2023–2024 Season Record</h1>
   <hr />
-  <img src="/images/Warriors Logo.png" alt="Warriors Logo"/>
-  <p>This is the first draft of the Warriors Record.</p>
+
+  <div class="record-header">
+    <img src="/images/Warriors Logo.png" alt="Warriors Logo" class="team-logo"/>
+    <p>Below are the key team statistics for the season:</p>
+  </div>
+
+  <table class="record-table">
+    <thead>
+      <tr>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>PPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{record.wins}}</td>
+        <td>{{record.losses}}</td>
+        <td>{{record.ppg}}</td>
+        <td>{{record.rpg}}</td>
+        <td>{{record.apg}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="note">* Statistics reflect the regular season totals.</p>
+
   <hr />
 </div>
+
+{{> footer}}

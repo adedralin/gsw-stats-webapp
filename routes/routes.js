@@ -64,8 +64,8 @@ router.get('/roster', (req, res) => {
   res.render("roster", { players });
 });
 
-// Record route
-router.get("/record", function (req, res) {
+// Record route (Hardcoded Data)
+router.get("/record", (req, res) => {
   const record = {
     teamName: "Golden State Warriors",
     wins: 44,
@@ -74,6 +74,7 @@ router.get("/record", function (req, res) {
     rpg: 44.6,
     apg: 29.7,
   };
+
   res.render("record", { record });
 });
 
