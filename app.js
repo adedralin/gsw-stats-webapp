@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-const config = require('./modules/config');
+const PORT = 3000;
 const routes = require('./routes/routes');
 const path = require('path');
 
@@ -22,13 +22,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-// Connect to the database
-connectDB(); // Connect to the database before setting up routes
-
 // Routes
 app.use('/', routes);
 
 // Start the server
-app.listen(config.port, () => {
-    console.log(`Server is running on port ${config.port}`);
+app.listen(PORT, () => {
+    console.log('Server is running on port ${PORT}');
 });
